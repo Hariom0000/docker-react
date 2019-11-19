@@ -1,3 +1,4 @@
+language: node_js
 sodu: required
 services:
   - docker
@@ -5,4 +6,4 @@ before-install:
   - docker build -t hariomsingh/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run hariomsingh/docker-react npm run test -- --coverage
+  - docker run hariomsingh/docker-react npm run test -- --coverage -
